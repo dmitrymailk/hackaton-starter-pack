@@ -1,0 +1,37 @@
+.item-container {
+  margin-bottom: 32px;
+  background: #ffffff;
+}
+
+.item-container__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8px;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.item-container__list-item > div {
+  margin-right: 16px;
+}
+
+.item-container__list-item::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.main-wrapper {
+  position: relative;
+}
+
+.main-wrapper__author {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 16px;
+  position: relative;
+  left: -8px;
+}
+/*# sourceMappingURL=index.css.map */

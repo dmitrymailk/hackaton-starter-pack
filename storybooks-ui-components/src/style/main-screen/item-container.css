@@ -1,0 +1,25 @@
+.item-container {
+  margin-bottom: 32px;
+  background: #ffffff;
+}
+
+.item-container__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8px;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.item-container__list-item > div {
+  margin-right: 16px;
+}
+
+.item-container__list-item::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/*# sourceMappingURL=item-container.css.map */

@@ -1,0 +1,196 @@
+.schedule
+  display: flex
+  flex-direction: column
+  width: 100%
+  overflow-x: hidden
+  max-width: 768px
+  position: relative
+  min-height: 520px
+  height: 100%
+  &__menu
+    position: absolute
+    right: 16px
+    top: 22px
+    &-list
+      background: #FFFFFF
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      height: 100vh
+      width: 264px
+      display: flex
+      position: fixed
+      flex-direction: column
+      align-items: flex-end
+      top: 0
+      z-index: 20
+      overflow: hidden
+      animation-timing-function: ease-in
+      &_open
+        right: 0
+        transition-duration: 0.2s, 0.2s
+        transition-delay: 0.2s, 0s
+      &_close
+        right: -264px
+        transition-duration: 0.2s, 0.2s
+        transition-delay: 0.2s, 0s
+
+      span
+        font-weight: normal
+        font-size: 24px
+        line-height: 28px
+        color: #333333
+        margin-right: 36px
+        display: flex
+        align-items: center
+        svg
+          margin-left: 8px
+      span:first-child
+        margin-top: 58px
+        margin-bottom: 32px
+    &-switch
+      position: fixed
+      // top: 22px
+      right: 16px
+      margin-left: 16px
+      z-index: 30
+      .container
+        display: flex
+        height: 48px
+        width: 64px
+        justify-content: flex-end
+        align-items: center
+        position: fixed
+        padding-right: 16px
+        top: 0
+        right: 0
+        span
+          width: 4px
+          height: 4px
+          background: #444444
+          border-radius: 1px
+          display: block
+          margin-right: 4px
+        span:last-child
+          margin: 0
+  &__controls
+    display: flex
+    margin: 12px 0 0 16px
+    // justify-content: center
+    &-button
+      width: 156px
+      height: 48px
+      box-sizing: border-box
+      border-radius: 8px
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 8px
+      font-weight: 500
+      font-size: 22px
+      &_active
+        background: #FF6363
+        color: #F9F9F9
+      &_disable
+        background: #FFF
+        border: 0.5px solid #666666
+        color: #333333
+    &-button:first-child
+      margin-right: 16px
+  &__table
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin-top: 12px
+    position: relative
+    &-day
+      margin-left: 16px
+      flex-direction: row
+      display: flex
+      position: relative
+
+.table-day
+  &__lesson
+    min-width: 296px
+    width: calc(100% - 8px)
+    height: 100px
+    background: #FFB672
+    border-radius: 8px
+    display: flex
+    align-items: center
+    margin-bottom: 3px
+    margin-right: 0
+  &__lessons
+    width: 100%
+    // display: flex
+    flex-direction: column
+  &__name
+    width: 40px
+    height: 512px
+    background: #254D71
+    border-radius: 16px 0px 0px 16px
+    display: flex
+    margin-left: auto
+    span
+      font-weight: 500
+      font-size: 21px
+      color: #F9F9F9
+      transform: rotate(90deg)
+      display: flex
+      align-items: center
+      width: 40px
+
+.lesson
+  &__time
+    width: 64px
+    height: 40px
+    background: #FFE3C9
+    border-radius: 4px
+    font-weight: 500
+    font-size: 21px
+    color: #333333
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: 8px
+    margin-right: 8px
+  &__content
+    min-width: 196px
+    width: calc(100% - 101px)
+    height: 76px
+    background: #FFE3C9
+    border-radius: 4px
+    font-weight: normal
+    font-size: 13px
+    color: #333333
+    display: flex
+    align-items: center
+    padding: 0 6px
+    text-align: center
+    overflow: hidden
+
+.returning-header
+  height: 48px
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  &__arrow
+    position: absolute
+    left: 8px
+  &__title
+    font-weight: 500
+    font-size: 22px
+    line-height: 26px
+    color: #333333
+
+.table
+  &__pointer
+    position: absolute
+    width: 24px
+    height: 24px
+    display: flex
+    background: #FF6363
+    transform: rotate(45deg)
+    left: -20px
+    top: -12px
+    border-radius: 1px

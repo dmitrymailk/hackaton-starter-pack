@@ -1,0 +1,86 @@
+.menu-burger
+  background: #FFFFFF
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  height: 100vh
+  width: 264px
+  display: flex
+  position: fixed
+  flex-direction: column
+  align-items: flex-end
+  top: 0
+  &_open
+    right: 0
+    transition-duration: 0.2s, 0.2s
+    transition-delay: 0.2s, 0s
+  &_close
+    right: -264px
+    transition-duration: 0.2s, 0.2s
+    transition-delay: 0.2s, 0s
+  &__switch
+    display: flex
+    width: 16px
+    height: 16px
+    flex-wrap: wrap
+    right: 16px
+    top: 16px
+    position: fixed
+
+    .container
+      width: 64px
+      height: 40px
+      display: block
+    span
+      width: 4px
+      height: 4px
+      background: #444444
+      border-radius: 1px
+      display: flex
+      position: absolute
+      transition-duration: 0.2s, 0.2s
+      transition-delay: 0.2s, 0s
+      animation-timing-function: ease-in
+    span:nth-child(odd)
+      left: 0
+    span:nth-child(even)
+      right: 0
+    span:nth-child(3), span:nth-child(4)
+      bottom: 0
+    span:nth-child(1)
+      transform-origin: top left
+
+    span:nth-child(2)
+      transform-origin: top right
+    &_animate
+      span:nth-child(1)
+        transform: rotate(-45deg)
+        height: 20px
+        position: absolute
+      span:nth-child(2)
+        transform: rotate(45deg)
+        position: absolute
+        height: 20px
+        right: -1px
+      span:nth-child(3), span:nth-child(4)
+        background: rgba(0, 0, 0, 0)
+      span:nth-child(1), span:nth-child(2)
+        transition-delay: 0s, 0,2s
+  &__list
+    margin: 64px 32px 0 0
+    transition-duration: 0.2s, 0.2s
+    transition-delay: 0.2s, 0s
+    &-item
+      text-align: end
+      font-weight: normal
+      font-size: 30px
+      line-height: 35px
+      color: #333333
+      margin-bottom: 32px
+
+// @keyframes crossAnim_1
+//   from
+//     transform: rotate(-45deg)
+//   to
+//     height: 22px
+//     top: -3px
+//     left: 6px
+//     transform: rotate(-45deg)
